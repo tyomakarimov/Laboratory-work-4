@@ -66,7 +66,7 @@ console.log('string2.length =>', string2.length);
 console.log('string.toLowerCase() =>', string2.toLowerCase());
 console.log('string.toUpperCase() =>', string2.toUpperCase());
 console.log("string2.includes(' ') =>", string2.includes(' '));
-console.log("string2.toUpperCase('q') =>", string2.toUpperCase('q'));
+console.log("string2.includes('q') =>", string2.includes('q'));
 console.log("string2.indexOf('o') =>", string2.indexOf('o'));
 console.log("string2.indexOf('n') =>", string2.indexOf('n'));
 console.log("string2.split(' ') =>", string2.split(' '));
@@ -84,7 +84,7 @@ console.log('array2.shift() =>', array2);
 array2.push([5, '']);
 console.log("array2.push([5, '']) =>", array2);
 array2.unshift({ age: 19 });
-console.log("array2.unshift([5, '']) =>", array2);
+console.log("array2.unshift({ age: 19 }) =>", array2);
 console.log('array2.slice(1, 3) =>', array2.slice(1, 3));
 array2.splice(2, 1);
 console.log('array2.splice(2, 1) =>', array2);
@@ -93,9 +93,9 @@ console.log('array2.indexOf(true) =>', array2.indexOf(true));
 
 const array3 = [12, 'true', false];
 
-console.log('array2.join() =>', array3.join());
-console.log("array2.join(' ') =>", array3.join(' '));
-console.log("array2.join('Q') =>", array3.join('Q'));
+console.log('array3.join() =>', array3.join());
+console.log("array3.join(' ') =>", array3.join(' '));
+console.log("array3.join('Q') =>", array3.join('Q'));
 
 const object2 = {
   name: 'Artem',
@@ -268,7 +268,7 @@ const maxArrayElement = array => {
   return Math.max(...array);
 };
 
-console.log(' maxArrayElement([54, 667, 332, 987, 234, 11]) =>',  maxArrayElement([54, 667, 332, 987, 234, 11]));
+console.log('maxArrayElement([54, 667, 332, 987, 234, 11]) =>',  maxArrayElement([54, 667, 332, 987, 234, 11]));
 
 // closures
 
@@ -287,13 +287,13 @@ const double = () => {
   const value1 = 5;
   let value2 = 7;
   return function() {
-    return [value1 * 2, value2 += 5];
+    return [value1 * 2, value2 * 5];
   };
 };
 
-const doubleValues = double();
+const doubleValue = double();
 
-console.log('doucleValues() =>', doubleValues());
+console.log('doubleValues() =>', doubleValues());
 
 const division2 = x => y => {
   return x / y;
@@ -311,7 +311,7 @@ const Module = (function() {
   return {
     outputMessage() {
       showMessage();
-    } 
+    }
   }
 })();
 
